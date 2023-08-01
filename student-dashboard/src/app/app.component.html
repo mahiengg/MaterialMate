@@ -1,0 +1,18 @@
+<app-tool-bar></app-tool-bar>
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened" mode ="side">
+    <a>home</a>
+    <a>profile</a>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+<div>main content</div>
+<button (click)="opened = !opened"> click</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<router-outlet></router-outlet> 
+
+
+

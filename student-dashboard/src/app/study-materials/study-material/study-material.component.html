@@ -1,0 +1,12 @@
+<div>
+  <app-study-material-list *ngIf="!!gridData" [data]="gridData">
+  </app-study-material-list>
+</div>
+<button
+  mat-fab
+  color="accent"
+  aria-label="Example icon button with a heart icon"
+  (click)="openDialog()"
+>
+  <mat-icon>add</mat-icon>
+</button>

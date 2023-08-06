@@ -1,18 +1,73 @@
-<app-tool-bar></app-tool-bar>
-
+<!-- 
 <mat-sidenav-container>
   <mat-sidenav [(opened)]="opened" mode ="side">
-    <a>home</a>
-    <a>profile</a>
+  <mat-nav-list>
+    <mat-list-item>home</mat-list-item>
+    <mat-list-item>my todo</mat-list-item>
+    <mat-list-item>semester</mat-list-item>
+  </mat-nav-list>
 
   </mat-sidenav>
   <mat-sidenav-content>
+    <app-tool-bar></app-tool-bar>
 <div>main content</div>
+<router-outlet></router-outlet> 
 <button (click)="opened = !opened"> click</button>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<router-outlet></router-outlet> 
+
+
+
+ -->
+ <app-tool-bar [currentUser] ="userName"></app-tool-bar>
+ <router-outlet></router-outlet> 
+
+ <!-- <div class="container"
+     fxLayout="row"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0"
+>
+  <div class="item item-1"   fxFlex="15%">
+    Item 1
+  </div>
+  <div class="item item-2">
+    Item 2
+  </div>
+</div>
+<div class="container"
+fxLayout="row"
+fxLayoutGap="10px"
+fxLayoutGap.xs="0"
+>
+<div class="item item-1"   fxFlex="15%">
+Item 1
+</div>
+<div class="item item-2">
+Item 2
+</div>
+</div>
+
+<div class="container"
+fxLayout
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="10px"
+fxLayoutGap.xs="0"
+>
+<div class="item item-1"   fxFlex="15%">
+Item 1
+</div>
+<div class="item item-2">
+Item 2
+</div>
+<div class="item item-3">
+Item 3
+</div>
+</div> -->
+
+
+
 
 
 

@@ -1,6 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h1>My Application</h1>
+    <span class="filler"></span>
 
-<mat-toolbar color ="primary">
-    <mat-toolbar-row>
-        <h1>right click</h1>
-    </mat-toolbar-row>
+    <h1>{{ currentUser }}</h1>
+
+    <button mat-button [matMenuTriggerFor]="menu" #menuTrigger>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="openAccount()">My Profile</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+  </mat-toolbar-row>
 </mat-toolbar>

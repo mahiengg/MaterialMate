@@ -18,11 +18,16 @@
           />
         </mat-form-field>
         <div>
-            <div>
-              <button [disabled] = "!loginForm.valid" type="submit">Login</button>
-            </div>
-            <div class="signUp">Not registered <span>Create account</span></div>
+          <div>
+            <button [disabled]="!loginForm.valid" type="submit">Login</button>
           </div>
+          <div class="signUp">
+            Not registered?
+            <span
+              ><a class="active" routerLink="/signup">Create account</a></span
+            >
+          </div>
+        </div>
       </form>
     </mat-card-content>
   </mat-card>

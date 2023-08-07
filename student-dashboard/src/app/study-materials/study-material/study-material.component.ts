@@ -67,46 +67,6 @@ onFirstDataRendered(params:any): void {
   params.api.sizeColumnsToFit();
 }
 
-  data = [
-    {
-      id: 1,
-      createdDate: '1/8/2024',
-      materialsrc:
-        'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf',
-      Name: 'material1',
-      Subject: 'ECE',
-    },
-    {
-      id: 2,
-      createdDate: '1/8/2023',
-      materialsrc:
-        'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf',
-      Name: 'material1',
-      Subject: 'ECE',
-    },
-    {
-      id: 3,
-      createdDate: '1/8/2023',
-      materialsrc: 'http://localhost:4200/assets/mmmm.pdf',
-      Name: 'material1',
-      Subject: 'ECE',
-    },
-    {
-      id: 4,
-      createdDate: '1/8/2023',
-      materialsrc: 'http://localhost:4200/assets/mmmm.pdf',
-      Name: 'material1',
-      Subject: 'ECE',
-    },
-    {
-      id: 5,
-      createdDate: '1/8/2023',
-      materialsrc: 'http://localhost:4200/assets/mmmm.pdf',
-      Name: 'material1',
-      Subject: 'ECE',
-    },
-  ];
-
   openDialog() {
     this.dialog.open(CreateMaterialDialogComponent, {
       height: '400px',

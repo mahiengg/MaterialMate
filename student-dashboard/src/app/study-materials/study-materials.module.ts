@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ViewerComponent } from './viewer/viewer.component';
 import { ApiService } from '../shared/api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     AgGridModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
     HttpClientModule
   ],
   providers: [

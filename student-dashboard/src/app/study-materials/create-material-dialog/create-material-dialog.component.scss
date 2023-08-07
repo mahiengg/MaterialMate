@@ -9,6 +9,40 @@
     margin: 5px;
   }
 
-  button{
-    display: flex;
+  button {
+    width: 215px;
+    height: 35px;
+    background: white;
+    color: black;
+    font-size: medium;
+    font-weight: 700;
+  }
+
+
+  ::ng-deep {
+    .mat-form-field-underline {
+      background-color: white !important;
+    }
+  
+    .mat-form-field-underline,
+    .mat-form-field-underline.mat-focused {
+      background-color: white;
+    }
+  
+    .mat-focused .mat-form-field-label {
+      color: #027d7c !important;
+    }
+    .mat-mdc-form-field-focus-overlay {
+      background-color: white;
+    }
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      background-color: white;
+    }
+
+    .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+      color: orange;
+  }
+  .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: var(--mdc-theme-primary, orange);
+}
   }

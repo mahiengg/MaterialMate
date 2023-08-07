@@ -1,22 +1,95 @@
-.pdf-viewer{
-height: 600px;
+.pdf-viewer {
+  height: 600px;
 }
 
-.pdf-container{
-    background-color: #f1f1f1;
+.pdf-container {
+  background-color: #3c3d3d;
 }
 
-button{
-    position: absolute;
-    right: 90px;
-    bottom: 90px;
+.header {
+  background: orange;
+  height: 30px;
+  margin: 0 0px 20px 0;
+}
+
+.noteButton {
+  position: absolute;
+  right: 90px;
+  bottom: 60px;
+}
+
+.pdf-viewer {
+  max-width: 60% !important;
+}
+
+.item {
+  max-width: 40% !important;
+  text-align: center;
+}
+
+input {
+  background: #f1f1f1;
+  border: none;
+  width: 425px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.searchIcon {
+  background-color: #f1f1f1 !important;
+  padding-left: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat left;
+  background-size: 20px;
+}
+
+input:focus {
+  outline: none !important;
+  outline-style: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+textarea:focus {
+  outline: none !important;
+  outline-style: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.note {
+  padding-left: 40px;
+}
+
+.saveNote {
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 65px;
+}
+
+.title {
+  padding: 8px;
+  text-align: left;
+}
+
+textarea {
+  background: #f1f1f1;
+  border: none;
+  width: 425px;
+  height: 90px;
+  border-radius: 4px;
+}
+
+.save {
+  background-color: #3c3d3d;
+  color: #f1f1f1;
 }
 
 .ng2-pdf-viewer-container {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

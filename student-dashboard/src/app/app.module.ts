@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButtonModule, MatFabButton } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { MatListModule } from '@angular/material/list';

@@ -28,6 +28,6 @@ export class LoginComponent {
     // this.apiService.loginUser(this.loginForm.value as LoginModel).subscribe((res)=>{
     //   console.log(res);
     // })
-    this.apiService.demosignIn(this.loginForm.value as LoginModel);
+    this.apiService.demoSignIn(this.loginForm.value as LoginModel);
   }
 }

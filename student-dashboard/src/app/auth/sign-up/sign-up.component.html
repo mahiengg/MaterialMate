@@ -1,5 +1,5 @@
-<div>
-  <mat-card class="example-card">
+
+  <mat-card >
     <mat-card-title>Sign up</mat-card-title>
 
     <mat-card-content>
@@ -11,7 +11,7 @@
               <input
                 type="text"
                 matInput
-                id="email"
+                id="firstName"
                 formControlName="firstName"
               />
             </mat-form-field>
@@ -22,7 +22,7 @@
               <input
                 type="text"
                 matInput
-                id="email"
+                id="lastName"
                 formControlName="lastName"
               />
             </mat-form-field>
@@ -41,19 +41,23 @@
               <input
                 type="password"
                 matInput
-                id="password"
+                id="passWord"
                 formControlName="passWord"
               />
             </mat-form-field>
           </div>
         </div>
         <div>
-            <div>
-              <button [disabled] = "!signForm.valid"  type="submit">Registered</button>
-            </div>
-            <div class="signUp">Have an account?<span>Login</span></div>
+          <div>
+            <button [disabled]="!signForm.valid" type="submit">
+              Registered
+            </button>
           </div>
+          <div class="signUp">
+            Have an account? <span><a class ="active" routerLink="/login">Login</a></span>
+          </div>
+        </div>
       </form>
     </mat-card-content>
   </mat-card>
-</div>
+

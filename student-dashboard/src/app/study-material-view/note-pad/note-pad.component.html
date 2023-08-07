@@ -1,0 +1,14 @@
+
+<div   *ngFor="let note of notes" class = "noteListContainer">
+  <div class="example-container" [class.mat-elevation-z8]="true">
+    <mat-card>
+      <mat-card-title-group>
+        <mat-card-title class ="noteTile"> {{note.noteTitle}}</mat-card-title>
+        <button mat-icon-button matSuffix >
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-card-title-group>
+      <mat-card-content class="noteContent">{{note.noteContent}}</mat-card-content>
+    </mat-card>
+  </div>
+</div>

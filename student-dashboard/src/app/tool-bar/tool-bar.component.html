@@ -1,13 +1,14 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row>
-    <h1>My Application</h1>
+    <h1>Material <span class="mate">Mate</span></h1>
     <span class="filler"></span>
 
-    <h1>{{ currentUser }}</h1>
+    <h1>{{ currentUserData }}</h1>
 
     <button mat-button [matMenuTriggerFor]="menu" #menuTrigger>
       <mat-icon>account_circle</mat-icon>
     </button>
+   
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="openAccount()">My Profile</button>
       <button mat-menu-item (click)="logout()">Logout</button>

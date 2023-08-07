@@ -2,7 +2,7 @@
     <h2>Create material</h2>
   <form [formGroup]="materialForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
-        <mat-label>User name</mat-label>
+      
       <input type="text" matInput placeholder="Name"  formControlName="name"  />
     </mat-form-field>
     <mat-form-field>
@@ -14,5 +14,6 @@
     <button   type="submit" mat-raised-button color="accent">
       Create
       </button>
+      
   </form>
 </div>

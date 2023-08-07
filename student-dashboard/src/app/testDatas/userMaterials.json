@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "createdDate": "1/8/2024",
+        "materialsrc":
+          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+        "Name": "material1",
+        "Subject": "ECE"
+      },
+      {
+        "id": 2,
+        "createdDate": "2/8/2024",
+        "materialsrc":
+          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+        "Name": "material1",
+        "Subject": "ECE"
+      },
+      {
+        "id": 3,
+        "createdDate": "3/8/2024",
+        "materialsrc":
+          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+        "Name": "material1",
+        "Subject": "ECE"
+      },
+      {
+        "id": 4,
+        "createdDate": "4/8/2024",
+        "materialsrc":
+          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+        "Name": "Data Science Material",
+        "Subject": "Data Science"
+      },
+      {
+        "id": 5,
+        "createdDate": "6/8/2024",
+        "materialsrc":
+          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+        "Name": "CSC Material",
+        "Subject": "Computer Science"
+      },
+      {
+        "id": 6,
+        "createdDate": "9/8/2024",
+        "materialsrc":
+          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+        "Name": "Communication",
+        "Subject": "Communication"
+      },
+      {
+        "id": 7,
+        "createdDate": "11/8/2024",
+        "materialsrc":
+          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+        "Name": "Software Material",
+        "Subject": "Software Engineering"
+      }
+]

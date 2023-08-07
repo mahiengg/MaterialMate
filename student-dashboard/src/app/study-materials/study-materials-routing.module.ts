@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { StudyMaterialComponent } from './study-material/study-material.component';
 import { ViewerComponent } from './viewer/viewer.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { notesResolver } from './notes.resolver';
 
 const routes: Routes = [
   {
@@ -14,15 +15,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('../study-material-view/study-material-view.module').then(
         (m) => m.StudyMaterialViewModule
-      ),
-  },
-  {
-    path: "viewer",
-    loadChildren: () =>
-    import('../study-material-view/study-material-view.module').then(
-      (m) => m.StudyMaterialViewModule
-    ),
-  },
+      ), resolve: {userNotes: notesResolver},
+  }
 ];
 
 @NgModule({

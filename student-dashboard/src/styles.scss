@@ -4,3 +4,14 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-toolbar{
+    min-height: 45px !important; 
+    height: 45px !important;
+    color: white !important;
+    background: #1C2B36 !important;
+}
+
+.active{
+    color: white;
+}

@@ -5,6 +5,8 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
+import { Registration } from 'src/app/shared/Models/registration.model';
+import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,7 +14,7 @@ import {
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent {
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private apiService :ApiService) {}
 
   signForm = this.fb.group({
     firstName: new FormControl('', [
@@ -28,6 +30,6 @@ export class SignUpComponent {
   });
 
   registered() {
-    console.log('ffffff');
+    this.apiService.demoSignUp(this.signForm.value as Registration);
   }
 }

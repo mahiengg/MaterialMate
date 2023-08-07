@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
+import { ActivatedRoute } from '@angular/router';
 import { PdfViewerComponent } from 'ng2-pdf-viewer';
 
 @Component({
@@ -13,8 +15,18 @@ export class MaterialViewerComponent implements OnInit {
   stringToSearch = 'download';
   query: string = '';
 
-  constructor() {}
-  ngOnInit(): void {}
+  @ViewChild('menuTrigger')
+  menuTrigger!: MatMenuTrigger;
+
+  notes:any;
+
+  constructor(  private activatedRoute: ActivatedRoute) {}
+  ngOnInit(): void {
+    this.activatedRoute.data.subscribe(({ userNotes }) => {
+      console.log(userNotes);
+       this.notes = userNotes;
+    });
+  }
   src = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
   src2 = 'http://localhost:4200/assets/mmmm.pdf';
 
@@ -39,6 +51,12 @@ export class MaterialViewerComponent implements OnInit {
         highlightAll: true,
       });
     }
+  }
+
+
+
+  addNote(){
+
   }
 
 }

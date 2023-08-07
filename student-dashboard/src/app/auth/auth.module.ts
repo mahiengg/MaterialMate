@@ -42,7 +42,6 @@ const appearance: MatFormFieldDefaultOptions = {
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatButtonModule,
     MatIconModule,
     MatDialogModule,
     MatInputModule,

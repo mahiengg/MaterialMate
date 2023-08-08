@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PdfViewerComponent } from 'ng2-pdf-viewer';
+import pdfMaterials from '../../testDatas/userMaterials.json';
 
 @Component({
   selector: 'app-material-viewer',
@@ -12,30 +13,39 @@ export class MaterialViewerComponent implements OnInit {
   @ViewChild(PdfViewerComponent) private pdfComponent:
     | PdfViewerComponent
     | undefined;
-  stringToSearch = 'download';
-  query: string = '';
 
+  query: string = '';
+  pdfSrc: any = '';
   @ViewChild('menuTrigger')
   menuTrigger!: MatMenuTrigger;
 
-  notes:any;
+  notes: any;
+  //https://www.gnits.ac.in/wp-content/uploads/2021/11/ECE-BOOK-1.pdf ==ece
+  //https://sd.blackball.lv/library/Beginning_Software_Engineering_(2015).pdf
+  //https://computingbook.org/FullText.pdf ==csc
+  //https://people.smp.uq.edu.au/DirkKroese/DSML/DSML.pdf ==dsml
+  //https://askmm.net/wp-content/uploads/2021/04/The-Science-of-Effective-Communication-by-Ian-Tuhovsky.pdf ==commu
 
-  constructor(  private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
+
   ngOnInit(): void {
+    console.log(this.activatedRoute.snapshot.paramMap.get('id'));
+    console.log(pdfMaterials);
+
     this.activatedRoute.data.subscribe(({ userNotes }) => {
       console.log(userNotes);
-       this.notes = userNotes;
+      this.notes = userNotes;
     });
+
+    this.pdfSrc = pdfMaterials.filter((x) => x.id.toString() === this.activatedRoute.snapshot.paramMap.get('id'))[0].materialsrc;
   }
-  src = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
-  src2 = 'http://localhost:4200/assets/mmmm.pdf';
 
   callBackFn($event: any) {
-    console.log($event);
+    //console.log($event);
   }
 
   pageRendered(e: CustomEvent) {
-    console.log('(page-rendered)', e);
+    //  console.log('(page-rendered)', e);
   }
 
   searchQueryChanged(newQuery: string) {
@@ -53,10 +63,9 @@ export class MaterialViewerComponent implements OnInit {
     }
   }
 
+  addNote() {}
 
-
-  addNote(){
-
+  goBack(){
+    this.router.navigate(['/studymaterials']);
   }
-
 }

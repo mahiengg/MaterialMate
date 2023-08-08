@@ -1,6 +1,12 @@
 .noteListContainer {
   padding-left: 40px;
   padding-bottom: 30px;
+  //overflow: scroll;
+}
+
+.container{
+    overflow-y: scroll;
+    height: 370px;
 }
 
 .example-container {

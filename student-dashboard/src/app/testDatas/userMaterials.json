@@ -1,10 +1,12 @@
+
+ 
 [
     {
         "id": 1,
         "createdDate": "1/8/2024",
         "materialsrc":
           "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
-        "Name": "material1",
+        "Name": "sample Material",
         "Subject": "ECE"
       },
       {
@@ -12,15 +14,15 @@
         "createdDate": "2/8/2024",
         "materialsrc":
           "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
-        "Name": "material1",
-        "Subject": "ECE"
+        "Name": "Big Data",
+        "Subject": "Big Data"
       },
       {
         "id": 3,
         "createdDate": "3/8/2024",
         "materialsrc":
           "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
-        "Name": "material1",
+        "Name": "Data sample",
         "Subject": "ECE"
       },
       {
@@ -35,7 +37,7 @@
         "id": 5,
         "createdDate": "6/8/2024",
         "materialsrc":
-          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+          "https://computingbook.org/FullText.pdf",
         "Name": "CSC Material",
         "Subject": "Computer Science"
       },
@@ -51,7 +53,7 @@
         "id": 7,
         "createdDate": "11/8/2024",
         "materialsrc":
-          "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf",
+          "https://sd.blackball.lv/library/Beginning_Software_Engineering_(2015).pdf",
         "Name": "Software Material",
         "Subject": "Software Engineering"
       }

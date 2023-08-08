@@ -19,6 +19,7 @@ import { ViewerComponent } from './viewer/viewer.component';
 import { ApiService } from '../shared/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AgGridModule,
     ReactiveFormsModule,
     FlexLayoutModule,
+    MatTooltipModule,
     HttpClientModule
   ],
   providers: [

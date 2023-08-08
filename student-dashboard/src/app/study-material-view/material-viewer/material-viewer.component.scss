@@ -1,5 +1,9 @@
 .pdf-viewer {
-  height: 600px;
+  //height: 600px;
+}
+
+.container{
+    position: relative;
 }
 
 .pdf-container {
@@ -61,10 +65,19 @@ textarea:focus {
   padding-left: 40px;
 }
 
+.add{
+    background: orange;
+    color: #FFF;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
 .saveNote {
   text-align: right;
   padding-top: 5px;
   padding-right: 65px;
+  padding-bottom: 10px;
 }
 
 .title {

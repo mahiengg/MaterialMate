@@ -54,6 +54,7 @@ export class StudyMaterialComponent {
   });
 }
 
+
 columnDefs:any = [
   {headerName: 'Action', field: 'Action',   cellRenderer: actionCellvalueRenderComponent,
 },

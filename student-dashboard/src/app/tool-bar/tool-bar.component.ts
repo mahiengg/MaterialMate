@@ -24,7 +24,7 @@ export class ToolBarComponent {
       .subscribe((userData) => {
         console.log(userData)
         if (userData) {
-          this.currentUserData = userData.first_name;
+          this.currentUserData = userData.firstName + " " + userData.lastName;
         } else {
           this.currentUserData = '';
         }

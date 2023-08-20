@@ -6,6 +6,14 @@
     position: relative;
 }
 
+.add{
+  background: #1c2b36;
+  color: #FFF;
+  
+  right: 50px;
+  bottom: 50px;
+}
+
 .pdf-container {
   background-color: #3c3d3d;
 }
@@ -29,6 +37,7 @@
 .item {
   max-width: 40% !important;
   text-align: center;
+  background-image: linear-gradient(180deg,#1c2b36, #1d3e34, #2a6050, #55b296);
 }
 
 input {
@@ -62,16 +71,18 @@ textarea:focus {
 }
 
 .note {
-  padding-left: 40px;
+  padding: 10px 33px 20px 36px;
 }
 
-.add{
+.goBack{
     background: orange;
     color: #FFF;
     position: absolute;
     left: 50px;
     top: 50px;
 }
+
+
 
 .saveNote {
   text-align: right;
@@ -93,10 +104,7 @@ textarea {
   border-radius: 4px;
 }
 
-.save {
-  background-color: #3c3d3d;
-  color: #f1f1f1;
-}
+
 
 .ng2-pdf-viewer-container {
   overflow: hidden;

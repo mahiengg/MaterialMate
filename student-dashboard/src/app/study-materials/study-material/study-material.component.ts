@@ -4,7 +4,8 @@ import { CreateMaterialDialogComponent } from '../create-material-dialog/create-
 import { ActivatedRoute } from '@angular/router';
 import { ColDef, GridApi, GridReadyEvent } from 'ag-grid-community';
 import { actionCellvalueRenderComponent } from '../study-material-list/actionCellvalueRender.component';
-
+import { map } from 'rxjs';
+import materialData from '../../testDatas/userMaterials.json';
 @Component({
   selector: 'app-study-material',
   templateUrl: './study-material.component.html',
@@ -17,7 +18,7 @@ export class StudyMaterialComponent {
   ) {}
 
   gridData: any;
-  rowData:any;
+ 
 
   private gridApi!: GridApi<any>;
 
@@ -34,39 +35,26 @@ export class StudyMaterialComponent {
   };
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(({ materialData }) => {
-      console.log(!!this.gridData);
+     this.activatedRoute.data.subscribe((data) => {
+      //this.gridData = data['materialData'];
       this.gridData = materialData;
-      console.log(this.gridData);
     });
   }
 
-  
- onGridReady(params: GridReadyEvent) {
- 
-  var cols = params.columnApi.getColumns()!;
-  cols.forEach(function (col) {
-    var colDef = col.getColDef();
-    // console.log(
-    //   colDef.headerName + ', Column ID = ' + col.getId(),
-    //   JSON.stringify(colDef)
-    // );
-  });
-}
+  onGridReady(params: GridReadyEvent) {
+    var cols = params.columnApi.getColumns()!;
+    cols.forEach(function (col) {
+      var colDef = col.getColDef();
+      // console.log(
+      //   colDef.headerName + ', Column ID = ' + col.getId(),
+      //   JSON.stringify(colDef)
+      // );
+    });
+  }
 
-
-columnDefs:any = [
-  {headerName: 'Action', field: 'Action',   cellRenderer: actionCellvalueRenderComponent,
-},
-  {headerName: 'id', field: 'id'},
-  {headerName: 'createdDate', field: 'createdDate'},
-  {headerName: 'Name', field: 'Name'},
-  {headerName: 'Subject', field: 'Subject'}
-];
-
-onFirstDataRendered(params:any): void {
-  params.api.sizeColumnsToFit();
-}
+  onFirstDataRendered(params: any): void {
+    params.api.sizeColumnsToFit();
+  }
 
   openDialog() {
     this.dialog.open(CreateMaterialDialogComponent, {

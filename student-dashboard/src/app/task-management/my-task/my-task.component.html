@@ -1,0 +1,42 @@
+<p>my-task works!</p>
+
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <div>
+    <h1>Task of the week : 42</h1>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="end center">
+    <div>
+      <button (click)="reduceSevenDays()" mat-icon-button>
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+    </div>
+    <mat-form-field color="accent">
+      <input
+        placeholder="choose your Date"
+        matInput
+        [matDatepicker]="picker1"
+        [(ngModel)]="selectedDate"
+        (dateInput)="addEvent( $event)" 
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker1"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker1 ></mat-datepicker>
+    </mat-form-field>
+    <div>
+      <button (click)="addSevenDays()" mat-icon-button>
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-my-taks-list
+  (deleteTaskEvent)="deleteTask($event)"
+  [todo]="todo"
+  [done]="done"
+  [tasks]="tasks"
+>
+</app-my-taks-list>

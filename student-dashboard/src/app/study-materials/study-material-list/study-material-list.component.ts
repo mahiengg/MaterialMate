@@ -39,8 +39,8 @@ export class StudyMaterialListComponent implements OnInit, OnChanges {
     },
     { headerName: 'id', field: 'id' },
     { headerName: 'createdDate', field: 'createdDate' },
-    { headerName: 'Name', field: 'Name' },
-    { headerName: 'Subject', field: 'Subject' },
+    { headerName: 'Name', field: 'materialName' },
+    { headerName: 'Subject', field: 'subjectName' },
   ];
 
   onGridReady(params: GridReadyEvent) {

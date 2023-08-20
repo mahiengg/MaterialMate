@@ -15,12 +15,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { TakeNotesBottomSheet } from './note-pad/TakeNotesBottomSheet';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     MaterialViewerComponent,
-    NotePadComponent
+    NotePadComponent,
+    TakeNotesBottomSheet
   ],
   imports: [
     CommonModule,
@@ -34,8 +39,11 @@ import { MatDividerModule } from '@angular/material/divider';
     HttpClientModule,
     MatCardModule,
     MatInputModule,
+    MatTooltipModule,
     MatMenuModule,
-    ReactiveFormsModule
+    MatBottomSheetModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ] ,
   providers: [
     

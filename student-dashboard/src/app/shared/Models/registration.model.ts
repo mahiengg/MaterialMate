@@ -8,6 +8,6 @@ export interface Registration{
 
 
 export interface LoginModel{
-    email: string | null;
+    userName: string | null;
     passWord:string | null;
 }

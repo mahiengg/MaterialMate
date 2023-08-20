@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './guards/auth.guard';
 import { materialsResolver } from './materials.resolver';
+import { taskResolverResolver } from './Resolvers/task-resolver.resolver';
 
 const routes: Routes = [
   {
@@ -15,8 +16,17 @@ const routes: Routes = [
       import('./study-materials/study-materials.module').then(
         (m) => m.StudyMaterialsModule
       ),
+    resolve: { materialData: materialsResolver },
     canActivate: [AuthGuard],
-    resolve: {materialData: materialsResolver},
+  },
+  {
+    path: 'myTask',
+    loadChildren: () =>
+      import('./task-management/task-management.module').then(
+        (m) => m.TaskManagementModule
+      ),
+       resolve: {userTaskData: taskResolverResolver},
+    // canActivate: [AuthGuard],
   },
 ];
 

@@ -1,0 +1,120 @@
+[
+  {
+    "joiningDate": "2023-01-15",
+    "tasks": [
+      {
+        "id": 1,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 2,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      }
+    ]
+  },
+  {
+    "joiningDate": "2023-06-10",
+    "tasks": [
+      {
+        "id": 3,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 4,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 5,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 6,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 7,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      }
+    ]
+  },
+  {
+    "joiningDate": "2023-11-10",
+    "tasks": [
+      {
+        "id": 8,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 9,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 3,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 10,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 11,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      }
+    ]
+  },
+  {
+    "joiningDate": "2023-02-10",
+    "tasks": [
+      {
+        "id": 12,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 13,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 14,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      }
+    ]
+  },
+  {
+    "joiningDate": "2023-03-10",
+    "tasks": []
+  },
+  {
+    "joiningDate": "2023-02-10",
+    "tasks": [
+      {
+        "id": 15,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 16,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 17,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      }
+    ]
+  },
+  {
+    "joiningDate": "2023-04-10",
+    "tasks": [
+      {
+        "id": 18,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 19,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      },
+      {
+        "id": 20,
+        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
+      }
+    ]
+  }
+]

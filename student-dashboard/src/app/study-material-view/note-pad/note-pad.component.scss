@@ -6,7 +6,16 @@
 
 .container{
     overflow-y: scroll;
-    height: 370px;
+    height: 600px;
+   
+}
+
+.add{
+  background: orange;
+  color: #FFF;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
 }
 
 .example-container {

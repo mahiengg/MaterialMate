@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { Registration } from './Models/registration.model';
 import { LoginModel } from './Models/registration.model';
 import { Route, Router } from '@angular/router';
@@ -43,22 +43,37 @@ export class ApiService {
 
   //https://www.positronx.io/angular-jwt-user-authentication-tutorial/
 
+  loginnnn(loginDetails: LoginModel) {
+    this.loginUser(loginDetails).subscribe((res) => {
+      console.log(res);
+      localStorage.setItem('access_token', res.jwtToken);
+      localStorage.setItem('currentUser', JSON.stringify(res));
+      this.setUserData(res);
+      //this.getUserProfile(res._id).subscribe((res) => {
+      this.currentUser = res;
+      this.router.navigate(['/studymaterials']);
+    });
+  }
   loginUser(loginDetails: LoginModel): Observable<any> {
     console.log(loginDetails);
-    const url = `${this.baseUrl}/login`;
+    const url = `http://localhost:8080/authenticate`;
     const headers = this.createHeaders();
-    return this.http.post(url, loginDetails);
+    return this.http.post(url, loginDetails).pipe(
+      tap((res) => {
+        console.log(res);
+        return res;
+        //this.router.navigate(['/studentmaterials']);
+      })
+    );
   }
 
   signIn(user: LoginModel) {
-    return this.http
-      .post<any>(`${this.baseUrl}/signin`, user)
-      .subscribe((res: any) => {
-        localStorage.setItem('access_token', res.token);
-        //this.getUserProfile(res._id).subscribe((res) => {
-        this.currentUser = res;
-        this.router.navigate(['/studentmaterials']);
-      });
+    return this.http.post<any>(`api/signin`, user).subscribe((res: any) => {
+      localStorage.setItem('access_token', res.token);
+      //this.getUserProfile(res._id).subscribe((res) => {
+      this.currentUser = res;
+      this.router.navigate(['/studentmaterials']);
+    });
     //});
   }
 
@@ -100,5 +115,61 @@ export class ApiService {
     if (removeToken == null && removeCurrentUser == null) {
       this.router.navigate(['']);
     }
+  }
+
+  //api calls for userMaterials
+
+  getUserPdfMaterials(): Observable<any> {
+    const url = `http://localhost:8080/materials`;
+    return this.http.get(url).pipe(
+      tap((res) => {
+        return res;
+      })
+    );
+  }
+
+  //api calls for User tasks
+
+  addUserTask(task:any){
+    console.log(task);
+    const url = `http://localhost:8080/task`;
+    const headers = this.createHeaders();
+    return this.http.post(url, task, { headers });
+  }
+
+  updateTaskDate(task:any, changeDate :any){
+    const url = `http://localhost:8081/updateDate`;
+  const params = new HttpParams()
+  .set('taskId', task.id)
+  .set('date', changeDate);
+  return this.http.delete(url, { params }).pipe(
+    tap((res) => {
+      return res;
+    })
+  );
+
+  }
+
+
+
+  getTaskByDate(date :any){
+    const url = `http://localhost:8080/usertask`;
+    const params = new HttpParams().set('date',date);
+    return this.http.get(url, { params }).pipe(
+      tap((res) => {
+        return res;
+      })
+    );
+  }
+
+  deleteUserTask(task: any) {
+    const url = `http://localhost:8081/deleteTask`;
+    const params = new HttpParams().set('id', task.id);
+
+    return this.http.delete(url, { params }).pipe(
+      tap((res) => {
+        return res;
+      })
+    );
   }
 }

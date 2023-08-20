@@ -38,41 +38,17 @@
     </div>
   </div>
   <div class="item" fxFlex="15%">
-    <!-- <div class="note">
-      <div >
-        <div class="title"><label>Take your notes</label></div>
-        <div class="title"><label>Note title</label></div>
-        <div class="title"><input name="noteTile" type="text" /></div>
-      </div>
-      <div >
-        <div class="title"><label>Content</label></div>
-        <div class="title"><textarea name="notes"></textarea></div>
-      </div>
-      <div class="saveNote">
-        <button mat-raised-button class="save">Save</button>
-      </div>
-    </div> -->
-
-    <div class="note">
-      <h1 class="title"><label>Sticky Notes</label></h1>
-
-      <div class="title"><textarea name="notes"></textarea></div>
-
-      <div class="saveNote">
-        <button mat-raised-button class="save">Save</button>
-      </div>
-    </div>
-
     <mat-divider> </mat-divider>
     <button
-    mat-fab
-    class="add"
-    aria-label="Example icon button with a heart icon"
-    (click)="goBack()"
-    matTooltip="Go back"
-  >
-    <mat-icon>arrow_back_ios</mat-icon>
-  </button>
+      mat-fab
+      class="goBack"
+      aria-label="Example icon button with a heart icon"
+      (click)="goBack()"
+      matTooltip="Go back"
+    >
+      <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+
     <div class="note">
       <div class="title">
         <input
@@ -84,6 +60,6 @@
       </div>
     </div>
 
-    <app-note-pad [notes]="notes"></app-note-pad>
+    <app-note-pad [notes]="notes" (newItemEvent)="removeItem($event)"></app-note-pad>
   </div>
 </div>

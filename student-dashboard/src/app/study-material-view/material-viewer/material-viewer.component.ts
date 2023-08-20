@@ -3,11 +3,42 @@ import { MatMenuTrigger } from '@angular/material/menu';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PdfViewerComponent } from 'ng2-pdf-viewer';
 import pdfMaterials from '../../testDatas/userMaterials.json';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-material-viewer',
   templateUrl: './material-viewer.component.html',
   styleUrls: ['./material-viewer.component.scss'],
+  animations: [
+    trigger('noteanimation', [
+      transition('void  => *',[
+
+        style({
+          height:0,
+          opacity:0,
+          transition:'scale(0.85)',
+          'margin-bottom': 0,
+
+          paddingTop: 0,
+          paddingBottom:0,
+          paddingRight:0,
+          paddingLeft:0
+        }),
+
+        animate('50ms',style({
+             height: '*',
+             'margin-bottom':'*',
+             paddingTop: '*',
+             paddingBottom:'*',
+             paddingRight:'*',
+             paddingLeft:'*'
+        })),
+
+        animate(68)
+
+      ] )
+    ])
+  ]
 })
 export class MaterialViewerComponent implements OnInit {
   @ViewChild(PdfViewerComponent) private pdfComponent:
@@ -68,4 +99,15 @@ export class MaterialViewerComponent implements OnInit {
   goBack(){
     this.router.navigate(['/studymaterials']);
   }
+
+  removeItem($event:any){
+    console.log($event);
+
+    const index = this.notes.indexOf($event);
+    if (index !== -1) {
+      this.notes.splice(index, 1);
+    }
+  }
+
+ 
 }

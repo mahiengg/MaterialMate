@@ -14,7 +14,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {FormsModule} from '@angular/forms';
-import { AddingNewTaskDialog } from './my-taks-list/AddingNewTaskDialog';
+import { AddingNewTaskDialog } from './my-task/AddingNewTaskDialog';
 
 
 

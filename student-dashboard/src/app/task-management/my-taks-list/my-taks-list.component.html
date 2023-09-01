@@ -1,7 +1,7 @@
 <div fxLayoutAlign="space-between" class="mainff" cdkDropListGroup>
   <div *ngFor="let item of tasks" class="example-container">
     <div fxLayout="row" fxLayoutAlign="space-evenly center">
-      <h4>{{ item.joiningDate }}</h4>
+      <h4>{{ item.taskDate | date: 'dd/MM/yyyy' }}</h4>
       <button class="iconSize" mat-mini-fab (click)="addTask(item)">
         <mat-icon>add</mat-icon>
       </button>
@@ -24,7 +24,7 @@
         cdkDrag
         [cdkDragData]="j"
       >
-        {{ j.toDo }}
+        {{ j.task_content }}
         {{ j.id }}
         <span [ngClass]="j.id === hoveredIndex ? 'hovered' : 'delete-button'"
           ><button mat-icon-button (click)="deleteTask(j)">

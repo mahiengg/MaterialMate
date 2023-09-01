@@ -13,6 +13,7 @@ import { MatMenuTrigger } from '@angular/material/menu';
 export class AppComponent {
   title = 'student-dashboard';
   opened = true;
+  
 
   currentUser:any = '';
   userName:any = "";

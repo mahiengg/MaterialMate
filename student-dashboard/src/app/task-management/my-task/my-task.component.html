@@ -35,6 +35,7 @@
 
 <app-my-taks-list
   (deleteTaskEvent)="deleteTask($event)"
+  (addTaskEvent)="addTask($event)"
   [todo]="todo"
   [done]="done"
   [tasks]="tasks"

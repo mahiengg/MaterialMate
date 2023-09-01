@@ -58,6 +58,6 @@ const appearance: MatFormFieldDefaultOptions = {
     }
     
     // ... other providers like services
-  ],
+  ], 
 })
 export class AuthModule { }

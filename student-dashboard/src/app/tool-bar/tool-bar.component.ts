@@ -14,6 +14,7 @@ export class ToolBarComponent {
   @Input() currentUser: any;
   @ViewChild('menuTrigger')
   menuTrigger!: MatMenuTrigger;
+  opened = true;
 
   currentUserData: any = '';
   userDataSubscription: Subscription;

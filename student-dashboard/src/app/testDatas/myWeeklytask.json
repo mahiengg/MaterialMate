@@ -1,120 +1,61 @@
 [
-  {
-    "joiningDate": "2023-01-15",
-    "tasks": [
-      {
-        "id": 1,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 2,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      }
-    ]
-  },
-  {
-    "joiningDate": "2023-06-10",
-    "tasks": [
-      {
-        "id": 3,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 4,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 5,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 6,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 7,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      }
-    ]
-  },
-  {
-    "joiningDate": "2023-11-10",
-    "tasks": [
-      {
-        "id": 8,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 9,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 3,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 10,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 11,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      }
-    ]
-  },
-  {
-    "joiningDate": "2023-02-10",
-    "tasks": [
-      {
-        "id": 12,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 13,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 14,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      }
-    ]
-  },
-  {
-    "joiningDate": "2023-03-10",
-    "tasks": []
-  },
-  {
-    "joiningDate": "2023-02-10",
-    "tasks": [
-      {
-        "id": 15,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 16,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 17,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      }
-    ]
-  },
-  {
-    "joiningDate": "2023-04-10",
-    "tasks": [
-      {
-        "id": 18,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 19,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      },
-      {
-        "id": 20,
-        "toDo": "If you want to disable dragging for a particular drag item, you can do so by setting the cdkDragDisabled"
-      }
-    ]
-  }
+    {
+        "taskDate": "2022-03-13T05:00:00.000+00:00",
+        "tasks": []
+    },
+    {
+        "taskDate": "2022-03-14T04:00:00.000+00:00",
+        "tasks": [
+            {
+                "id": 1,
+                "task_content": "new forth Task created for the user",
+                "taskDate": "2022-03-14T16:53:01.000+00:00"
+            },
+            {
+                "id": 2,
+                "task_content": "new forth Task created for the user",
+                "taskDate": "2022-03-14T16:53:01.000+00:00"
+            },
+            {
+                "id": 3,
+                "task_content": "new forth Task created for the user",
+                "taskDate": "2022-03-14T16:53:01.000+00:00"
+            },
+            {
+                "id": 4,
+                "task_content": "new forth Task created for the user",
+                "taskDate": "2022-03-14T16:53:01.000+00:00"
+            },
+            {
+                "id": 5,
+                "task_content": "new forth Task created for the user",
+                "taskDate": "2022-03-14T16:53:01.000+00:00"
+            },
+            {
+                "id": 6,
+                "task_content": "new forth Task created for the user",
+                "taskDate": "2022-03-14T16:53:01.000+00:00"
+            }
+        ]
+    },
+    {
+        "taskDate": "2022-03-15T04:00:00.000+00:00",
+        "tasks": []
+    },
+    {
+        "taskDate": "2022-03-16T04:00:00.000+00:00",
+        "tasks": []
+    },
+    {
+        "taskDate": "2022-03-17T04:00:00.000+00:00",
+        "tasks": []
+    },
+    {
+        "taskDate": "2022-03-18T04:00:00.000+00:00",
+        "tasks": []
+    },
+    {
+        "taskDate": "2022-03-19T04:00:00.000+00:00",
+        "tasks": []
+    }
 ]

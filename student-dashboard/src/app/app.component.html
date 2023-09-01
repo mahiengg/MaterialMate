@@ -1,5 +1,8 @@
-<!-- 
-<mat-sidenav-container>
+ 
+
+
+
+<!-- <mat-sidenav-container  *ngIf="isLoggedIn$ | async as isLoggedIn">
   <mat-sidenav [(opened)]="opened" mode ="side">
   <mat-nav-list>
     <mat-list-item>home</mat-list-item>
@@ -12,19 +15,22 @@
     <app-tool-bar></app-tool-bar>
 <div>main content</div>
 <router-outlet></router-outlet> 
+
 <button (click)="opened = !opened"> click</button>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
 
 
 
 
- -->
 
  
 
- <app-tool-bar [currentUser] ="userName"></app-tool-bar>
+ 
+
+ <app-tool-bar [currentUser] ="userName"></app-tool-bar> 
  <router-outlet></router-outlet> 
+
 
  <!-- <div class="container"
      fxLayout="row"

@@ -5,7 +5,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-add-task-dialog',
   template: `
-    <h5 mat-dialog-title>Create a task on  {{ data.item.joiningDate }}</h5>
+    <h5 mat-dialog-title>Create a task on  {{ data.item.taskDate | date: 'dd/MM/yyyy' }}</h5>
     <div mat-dialog-content>
       <textarea [(ngModel)]="textareaData" name="task"></textarea>
     </div>
@@ -43,6 +43,6 @@ export class AddingNewTaskDialog {
   textareaData: string = '';
   onNoClick() {
     
-    this.dialogRef.close();
+    this.dialogRef.close(false);
   }
 }

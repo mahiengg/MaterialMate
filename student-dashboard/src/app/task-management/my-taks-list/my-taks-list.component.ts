@@ -11,11 +11,14 @@ import {
   OnChanges,
   Output,
   Renderer2,
+  SimpleChange,
+  SimpleChanges,
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
-import { AddingNewTaskDialog } from './AddingNewTaskDialog';
+import { AddingNewTaskDialog } from '../my-task/AddingNewTaskDialog';
 import { ApiService } from 'src/app/shared/api.service';
+import moment from 'moment';
 
 @Component({
   selector: 'app-my-taks-list',
@@ -26,6 +29,7 @@ export class MyTaksListComponent implements OnChanges {
   @Input() todo: any;
   @Input() done: any;
   @Input() tasks: any;
+  @Output() addTaskEvent = new EventEmitter<string>();
   @Output() deleteTaskEvent = new EventEmitter<string>();
 
   changedTaskArray: any = [];
@@ -33,11 +37,12 @@ export class MyTaksListComponent implements OnChanges {
 
   constructor(private dialog: MatDialog, private apiService: ApiService) {}
 
-  ngOnChanges() {
+  ngOnChanges(changes: SimpleChanges) {
     console.log(this.tasks);
     // this.rowData = this.data1;
   }
 
+ 
   drop(event: CdkDragDrop<string[]>, dropedDate: any) {
   
     if (event.previousContainer === event.container) {
@@ -93,23 +98,37 @@ export class MyTaksListComponent implements OnChanges {
 
   addTask(item: any) {
     console.log(item);
-    const dialogRef = this.dialog.open(AddingNewTaskDialog, {
-      data: { item: item },
-    });
+    this.addTaskEvent.emit(item);
+    // const dialogRef = this.dialog.open(AddingNewTaskDialog, {
+    //   data: { item: item },
+    // });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log(result);
+    // dialogRef.afterClosed().subscribe((result) => {
+    //   console.log(result);
 
-      const newTask: any = [];
+    //   const newTask: any = {};
 
-      newTask.task = result;
-      newTask.task_date = item.joiningDate;
+    //   newTask.task = result;
+    //   newTask.task_date = moment(item.taskDate).format('yyyy-MM-DD');
 
-      this.apiService.addUserTask(newTask).subscribe((res) => {
-        console.log(res);
-      });
-    });
-  }
+    //   this.apiService.addUserTask(newTask).subscribe((res:any) => {
+    //     console.log(res);
+    //   this.tasks.map((x :any) =>{ 
+        
+    //     if(moment(x.taskDate).
+    //     format('yyyy-MM-DD') === moment(item.taskDate).format('yyyy-MM-DD'))
+    //     {
+    //         x.tasks.id = res.id;
+    //         x.tasks.taskDate = res.task_date;
+    //         x.tasks.task_content = res.task;
+    //     }
+    //     return x;
+    //   });
+    // });
+  //});
+  console.log(this.tasks)
+}
+  
 
   deleteTask(task: any) {
     console.log(task);
